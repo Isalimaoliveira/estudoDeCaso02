@@ -3,11 +3,11 @@ package IFSC;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Carros {
+public class MainCarro {
 
 	public static void main(String[] args) {
 
-		ArrayList<Carros> gerenciamento = new ArrayList<>();
+		ArrayList<Carro> gerenciamento = new ArrayList<>();
 		Scanner leitura = new Scanner(System.in);
 		
 		int op = 0;
@@ -76,10 +76,13 @@ public class Carros {
 				/////////////////////
 
 				// adicionar
-				gerenciamento.add(null);
+				gerenciamento.add(car);
 				break;
 
 			case 2:
+				for (Carro carro : gerenciamento) {
+					System.out.println(carro.getCor());
+				}
 				break;
 			case 3:
 				break;
