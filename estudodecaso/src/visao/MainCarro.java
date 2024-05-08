@@ -1,7 +1,9 @@
-package IFSC;
+package visao;
 
 import java.util.ArrayList;
 import java.util.Scanner;
+
+import modelo.Carro;
 
 public class MainCarro {
 	private static boolean CarroRemovido = false;
@@ -23,13 +25,14 @@ public class MainCarro {
 
 		ArrayList<Carro> gerenciamento = new ArrayList<>();
 		Scanner leitura = new Scanner(System.in);
-		int op = 0;
+		int op = 0; //declaração de uma variável op para armazenar a opção esscolhida pelo usuário.
 
 		do {
 
 			exibirMenu();
 			op = leitura.nextInt();
 			leitura.nextLine();
+
 
 			switch (op) {
 
@@ -137,6 +140,7 @@ public class MainCarro {
 				break;
 
 			case 5:
+				
 //atualizar
 
 				System.out.println("Digite o numero da vaga do carro a ser atualizado:");
@@ -180,8 +184,10 @@ public class MainCarro {
 
 				}
 				break;
-
+				
 			case 6:
+				
+//Encerrar programa.
 
 				System.out.println("Encerrando o programa...");
 

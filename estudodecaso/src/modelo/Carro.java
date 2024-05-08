@@ -1,4 +1,4 @@
-package IFSC;
+package modelo;
 
 public class Carro {
 	
@@ -83,7 +83,7 @@ public class Carro {
 	  @Override
 
 	    public String toString() {
-
+//Adicionar a string de retorno:
 	        return "Número da vaga: " + numerodavaga +
 
 	               ", Marca: " + marca +
