@@ -3,6 +3,7 @@ package visao;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import controle.CarroDAO;
 import modelo.Carro;
 
 public class MainCarro {
@@ -25,6 +26,7 @@ public class MainCarro {
 
 		ArrayList<Carro> gerenciamento = new ArrayList<>();
 		Scanner leitura = new Scanner(System.in);
+		
 		int op = 0; //declaração de uma variável op para armazenar a opção esscolhida pelo usuário.
 
 		do {
@@ -39,13 +41,8 @@ public class MainCarro {
 			case 1:
 
 				if (gerenciamento.size() < 20) {
-					System.out.println("Digite o numero da vaga:");
-					String numerodavaga = leitura.nextLine();
-					Integer numVagaInt = Integer.parseInt(numerodavaga);
-
+					
 					Carro car = new Carro();
-
-					car.setNumerodavaga(numVagaInt);
 
 					System.out.println("Digite a marca:");
 					String marca = leitura.nextLine();
@@ -76,7 +73,8 @@ public class MainCarro {
 
 					System.out.println("Veículo cadastrado com sucesso!");
 
-					gerenciamento.add(car);
+				CarroDAO dao = new CarroDAO();
+				dao.inserir(car);
 				} else {
 					System.out.println("Capacidade máxima atingida!");
 				}
